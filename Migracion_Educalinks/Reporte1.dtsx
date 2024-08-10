@@ -1,0 +1,2270 @@
+﻿<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="5/19/2023 3:21:11 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="ROBOTSQL-SRV"
+  DTS:CreatorName="ROBOTSQL-SRV\Administrador"
+  DTS:DTSID="{34349D57-2B5E-4CBA-A22F-37BE677953AB}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="16.0.5035.3"
+  DTS:LocaleID="3082"
+  DTS:ObjectName="Package1"
+  DTS:PackageType="5"
+  DTS:VersionBuild="11"
+  DTS:VersionGUID="{B865BD10-00DB-4C9A-A2A8-E8DB224B8DB5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[119.8.8.212.Report_Ecotec.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{2728B941-C98A-4E7C-8C57-9C244C81C76D}"
+      DTS:ObjectName="119.8.8.212.Report_Ecotec.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=119.8.8.212;User ID=sa;Initial Catalog=Report_Ecotec;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package1-{2728B941-C98A-4E7C-8C57-9C244C81C76D}119.8.8.212.Report_Ecotec.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdgtuPfVGmk6e0VaQap2NCgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAD6x+tAPej4WnYW6znv0JWnM5qNt3qjbkDPd8UmpLJI/wAAAAAOgAAAAAIAACAAAAApPFq7x9ER8AM5kuAbVjCjiOxK6b39lKXghTfnM/KkhyAAAABS/hteov/GsbwBuYfFCGoHhIkpN2a/VyiMn4QaqJTSv0AAAACqxB+MSZQMw47oKwEJL/h1d3esErtd7fgsBMBBaCz6OR6JVAWHSSagXVU11LQD8oBarS8507aiX2EQIAsirw1c</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[122.8.191.123.Ecotec.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{945F0173-026F-4334-917A-82C3FD196EE4}"
+      DTS:ObjectName="122.8.191.123.Ecotec.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=122.8.191.123;User ID=sa;Initial Catalog=Ecotec;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package1-{945F0173-026F-4334-917A-82C3FD196EE4}122.8.191.123.Ecotec.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdgtuPfVGmk6e0VaQap2NCgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAAAH3uAGfIWCcCP6Knq784f3TqGZcGwzPpQMjrK0G7euZQAAAAAOgAAAAAIAACAAAABLkawbdXbzfmzcvjQvUZg6vPt0zFy8H1uOnoR/fcN6JyAAAACefPOD5f7Xd8iE3rYAFZj4FSxXTbdNYRkHM40s9Nu8PUAAAABFIDuOykxeoDQsL/7JFz4V+VTtWTb6wKEtS3LrFgoIBKOxtpH85flCld+0X2k3ug0YyuLkZzRF1BjYk/ST6bX5</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[122.8.191.123.Ecotec_migra.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{55666CBA-CED1-4311-829B-9C8AEA1EE490}"
+      DTS:ObjectName="122.8.191.123.Ecotec_migra.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=122.8.191.123;User ID=sa;Initial Catalog=Ecotec_migra;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package1-{55666CBA-CED1-4311-829B-9C8AEA1EE490}122.8.191.123.Ecotec_migra.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdgtuPfVGmk6e0VaQap2NCgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABHegOATKXrdN0HI3tpgXM4nK6cHo4HeJ9GEVI4lmRGkgAAAAAOgAAAAAIAACAAAACCYr1NecX3MOftiu7JKfD0B5GaF8AiTjopLkeROBJtrCAAAAAhFPnjTnJwzsZzQKkNpmhFaRfk208MRVrtE2tpiXX/MkAAAACT9h/EeeUBXucAIW8CACqrzzKaTZWnToJ2QOZoaPNnbbyhVQ6IFfg1TzNPygeWkNX4/fpe9oyfsNYDZzOZNejn</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[122.8.191.123.landlord.sa]"
+      DTS:CreationName="OLEDB"
+      DTS:DTSID="{6FC84C1F-6C12-47D6-8E2C-A1B2B5B59649}"
+      DTS:ObjectName="122.8.191.123.landlord.sa">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectRetryCount="1"
+          DTS:ConnectRetryInterval="5"
+          DTS:ConnectionString="Data Source=122.8.191.123;User ID=sa;Initial Catalog=landlord;Provider=SQLNCLI11.1;Persist Security Info=True;Application Name=SSIS-Package1-{6FC84C1F-6C12-47D6-8E2C-A1B2B5B59649}122.8.191.123.landlord.sa;Auto Translate=False;">
+          <DTS:Password
+            DTS:Name="Password"
+            Sensitive="1"
+            Encrypted="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAdgtuPfVGmk6e0VaQap2NCgAAAAAIAAAARABUAFMAAAAQZgAAAAEAACAAAABD+YPNHXbOnnMStX52/pbuptjo/QcohXff+nyauKupigAAAAAOgAAAAAIAACAAAADXQAvQKarqDRnn2ZyH5/3dl4gibUQbYu/IW/9BhZe5/SAAAAA9Il82iFKxVrI0kvbIlFjNDe+ueZSMWIRzwM8MV+n7UEAAAAAKB43CRh4avbxUPd5RpY5rbtrA9UKrjmLE+rJwhNTz9QJ0wX/T2oFsO+EczcV2oUOAPRhYVK2HV5oGRcqViDJR</DTS:Password>
+        </DTS:ConnectionManager>
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:PackageParameters>
+    <DTS:PackageParameter
+      DTS:CreationName=""
+      DTS:DataType="8"
+      DTS:DTSID="{9D3D92C8-2B4A-490E-8543-0D2FD92C1799}"
+      DTS:ObjectName="Tennat"
+      DTS:Required="True">
+      <DTS:Property
+        DTS:DataType="8"
+        DTS:Name="ParameterValue"
+        xml:space="preserve"></DTS:Property>
+    </DTS:PackageParameter>
+  </DTS:PackageParameters>
+  <DTS:Variables>
+    <DTS:Variable
+      DTS:CreationName=""
+      DTS:DTSID="{57239302-BC39-47C6-BBE3-757247E81490}"
+      DTS:IncludeInDebugDump="2345"
+      DTS:Namespace="User"
+      DTS:ObjectName="NameDb">
+      <DTS:VariableValue
+        DTS:DataType="8"
+        xml:space="preserve"></DTS:VariableValue>
+    </DTS:Variable>
+  </DTS:Variables>
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\cartera_vencida_posgrado"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{52206f75-2378-4869-b2dd-6f3a533b2978}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="cartera_vencida_posgrado"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\cartera_vencida_posgrado\Ecotec"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Ecotec"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[rpt_cartera_vencida_postgrado]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">select
+	p.per_current_year  as 'periodo_anio',
+	p.per_name  as 'cohorte',
+	CONVERT(date ,p.start_process)as 'fecha_inicio',
+	--e.principal_id as unidad_academica,	
+	(select id from education_levels where id=e.principal_id) as 'niveles_educativos_id_facultad',
+	(select id from education_levels where id=sr.education_level_id) as 'niveles_educativos_id_carrera',
+	(select off_name from offers where id=e.offer_id) as 'oferta_academica',
+	(select top 1 s.id from students S  inner join users U on U.id=S.user_id inner join persons P on P.id=U.person_id where S.id=d.student_id) as 'alumno_id',
+	(select top 1 pers_email from students S  inner join users U on U.id=S.user_id inner join persons P on P.id=U.person_id where S.id=d.student_id) as 'email1',
+	(select top 1 email from students S  inner join users U on U.id=S.user_id inner join persons P on P.id=U.person_id where S.id=d.student_id) as 'email2',
+	(select fees_name_identifier from fees where fees.id = f.id ) as 'cuota',
+	(select sum (fees.fees_net_amount) from fees where fees.id = f.id ) as 'VALOR',
+	f.fees_expiration_date as 'fecha_vencimiento',
+	datename(MM,f.fees_expiration_date)+' '+convert(nvarchar,year(fees_expiration_date)) as 'año_mes_vencimiento'
+from debts d
+inner join fees f on f.id_debts = d.id
+inner join periods p on d.period_id = p.id
+inner join student_recods_period srp on srp.periodo_id = p.id
+inner join student_records sr on sr.student_id = d.student_id and sr.id = srp.student_record_id
+inner join education_levels e on e.id = sr.education_level_id
+where d.de_balance_value &gt; 0  and f.fees_expiration_date &lt; GETDATE() and e.offer_id=3</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\cartera_vencida_posgrado\Ecotec.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[122.8.191.123.Ecotec.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[122.8.191.123.Ecotec.sa]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[alumno_id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[alumno_id]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[alumno_id]"
+                      name="alumno_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[niveles_educativos_id_facultad]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      name="niveles_educativos_id_facultad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[niveles_educativos_id_carrera]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      name="niveles_educativos_id_carrera"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[periodo_anio]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[periodo_anio]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[periodo_anio]"
+                      name="periodo_anio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[cohorte]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[cohorte]"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[cohorte]"
+                      name="cohorte"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_inicio]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_inicio]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_inicio]"
+                      name="fecha_inicio"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[oferta_academica]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[oferta_academica]"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[oferta_academica]"
+                      name="oferta_academica"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[email1]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[email1]"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[email1]"
+                      name="email1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[email2]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[email2]"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[email2]"
+                      name="email2"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[cuota]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[cuota]"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[cuota]"
+                      name="cuota"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[VALOR]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[VALOR]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[VALOR]"
+                      name="VALOR"
+                      precision="38"
+                      scale="4"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_vencimiento]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_vencimiento]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_vencimiento]"
+                      name="fecha_vencimiento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[año_mes_vencimiento]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[año_mes_vencimiento]"
+                      length="61"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[año_mes_vencimiento]"
+                      name="año_mes_vencimiento"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[alumno_id]"
+                      dataType="i8"
+                      name="alumno_id" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[niveles_educativos_id_facultad]"
+                      dataType="i8"
+                      name="niveles_educativos_id_facultad" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[niveles_educativos_id_carrera]"
+                      dataType="i8"
+                      name="niveles_educativos_id_carrera" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[periodo_anio]"
+                      dataType="i4"
+                      name="periodo_anio" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[cohorte]"
+                      dataType="wstr"
+                      length="255"
+                      name="cohorte" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_inicio]"
+                      dataType="dbDate"
+                      name="fecha_inicio" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[oferta_academica]"
+                      dataType="wstr"
+                      length="255"
+                      name="oferta_academica" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[email1]"
+                      dataType="wstr"
+                      length="255"
+                      name="email1" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[email2]"
+                      dataType="wstr"
+                      length="255"
+                      name="email2" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[cuota]"
+                      dataType="wstr"
+                      length="255"
+                      name="cuota" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[VALOR]"
+                      dataType="numeric"
+                      name="VALOR"
+                      precision="38"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_vencimiento]"
+                      dataType="dbDate"
+                      name="fecha_vencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[año_mes_vencimiento]"
+                      dataType="wstr"
+                      length="61"
+                      name="año_mes_vencimiento" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[periodo_anio]"
+                      dataType="i4"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[periodo_anio]"
+                      name="periodo_anio" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[cohorte]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[cohorte]"
+                      name="cohorte" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_inicio]"
+                      dataType="dbDate"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_inicio]"
+                      name="fecha_inicio" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      dataType="i8"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      name="niveles_educativos_id_facultad" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      dataType="i8"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      name="niveles_educativos_id_carrera" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[oferta_academica]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[oferta_academica]"
+                      name="oferta_academica" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[alumno_id]"
+                      dataType="i8"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[alumno_id]"
+                      name="alumno_id" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[email1]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[email1]"
+                      name="email1" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[email2]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[email2]"
+                      name="email2" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[cuota]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[cuota]"
+                      name="cuota" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[VALOR]"
+                      dataType="numeric"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[VALOR]"
+                      name="VALOR"
+                      precision="38"
+                      scale="4" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_vencimiento]"
+                      dataType="dbDate"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_vencimiento]"
+                      name="fecha_vencimiento" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[año_mes_vencimiento]"
+                      dataType="wstr"
+                      length="61"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[año_mes_vencimiento]"
+                      name="año_mes_vencimiento" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\cartera_vencida_posgrado\rpt_Ecotec"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="rpt_Ecotec"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[rpt_cartera_vencida_postgrado]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[119.8.8.212.Report_Ecotec.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[119.8.8.212.Report_Ecotec.sa]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[alumno_id]"
+                      cachedDataType="i8"
+                      cachedName="alumno_id"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[alumno_id]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[alumno_id]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      cachedDataType="i8"
+                      cachedName="niveles_educativos_id_facultad"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[niveles_educativos_id_facultad]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_facultad]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      cachedDataType="i8"
+                      cachedName="niveles_educativos_id_carrera"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[niveles_educativos_id_carrera]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_carrera]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[periodo_anio]"
+                      cachedDataType="i4"
+                      cachedName="periodo_anio"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[periodo_anio]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[periodo_anio]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[cohorte]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="cohorte"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[cohorte]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[cohorte]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[fecha_inicio]"
+                      cachedDataType="dbDate"
+                      cachedName="fecha_inicio"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_inicio]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_inicio]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[oferta_academica]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="oferta_academica"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[oferta_academica]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[oferta_academica]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[email1]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="email1"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[email1]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[email1]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[email2]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="email2"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[email2]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[email2]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[cuota]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="cuota"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[cuota]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[cuota]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[VALOR]"
+                      cachedDataType="numeric"
+                      cachedName="VALOR"
+                      cachedPrecision="38"
+                      cachedScale="4"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[valor]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[VALOR]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[fecha_vencimiento]"
+                      cachedDataType="dbDate"
+                      cachedName="fecha_vencimiento"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_vencimiento]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_vencimiento]" />
+                    <inputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[año_mes_vencimiento]"
+                      cachedDataType="wstr"
+                      cachedLength="61"
+                      cachedName="año_mes_vencimiento"
+                      externalMetadataColumnId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[año_mes_vencimiento]"
+                      lineageId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB].Columns[año_mes_vencimiento]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[niveles_educativos_id_facultad]"
+                      dataType="i8"
+                      name="niveles_educativos_id_facultad" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[niveles_educativos_id_carrera]"
+                      dataType="i8"
+                      name="niveles_educativos_id_carrera" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[alumno_id]"
+                      dataType="i8"
+                      name="alumno_id" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[periodo_anio]"
+                      dataType="i8"
+                      name="periodo_anio" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[cohorte]"
+                      dataType="wstr"
+                      length="160"
+                      name="cohorte" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_inicio]"
+                      dataType="dbDate"
+                      name="fecha_inicio" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[oferta_academica]"
+                      dataType="wstr"
+                      length="160"
+                      name="oferta_academica" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[email1]"
+                      dataType="wstr"
+                      length="160"
+                      name="email1" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[email2]"
+                      dataType="wstr"
+                      length="160"
+                      name="email2" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[cuota]"
+                      dataType="wstr"
+                      length="160"
+                      name="cuota" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[valor]"
+                      dataType="numeric"
+                      name="valor"
+                      precision="18"
+                      scale="4" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_vencimiento]"
+                      dataType="dbDate"
+                      name="fecha_vencimiento" />
+                    <externalMetadataColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[año_mes_vencimiento]"
+                      dataType="wstr"
+                      length="100"
+                      name="año_mes_vencimiento" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\cartera_vencida_posgrado\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\cartera_vencida_posgrado\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\cartera_vencida_posgrado\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\cartera_vencida_posgrado.Paths[Salida de origen de OLE DB]"
+              endId="Package\cartera_vencida_posgrado\rpt_Ecotec.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\cartera_vencida_posgrado\Ecotec.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\postgrado_retirados"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{3D8EFCF6-6570-4E74-A284-D19220D6BD27}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="postgrado_retirados"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\postgrado_retirados\ecotec"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="ecotec"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset"></property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">--select top 0 * from rpt_postgrado_retirados
+
+
+select alumno_id, programa,programa as cohorte,   fecha_ini,observacion,CAST(estado as nvarchar(20)) estado
+from(
+select 
+S.id as 'alumno_id'
+
+,CASE 
+WHEN (select COUNT(*) from course_student cs (NOLOCK) WHERE cs.student_record_id = sr.id) = 0 
+then (select top 1 p.per_name 
+from debts d (NOLOCK)
+inner join periods p (NOLOCK) ON d.period_id = p.id
+where d.student_id = s.id
+order by de_date desc)
+else (P.per_name) end as 'programa'
+
+,CASE 
+WHEN (select COUNT(*) from course_student cs (NOLOCK) WHERE cs.student_record_id = sr.id) = 0 
+then (select top 1 d.de_date 
+from debts d (NOLOCK)
+inner join periods p (NOLOCK) ON d.period_id = p.id
+where d.student_id = s.id
+order by de_date desc)
+else (select top 1 CONVERT(DATE,start_date) 
+from course_student cs (NOLOCK)
+inner join courses c (NOLOCK) ON c.id = cs.course_id 
+where cs.student_record_id = SR.id 
+order by start_date) end as 'fecha_ini'
+
+,CASE 
+WHEN (select COUNT(*) from course_student cs (NOLOCK) where SR.id = cs.student_record_id and cs.period_id = p.id and CS.approval_reason_id in (select id from VW_CATALOGO_REASON_COURSE (NOLOCK) WHERE Keyword in( 'motivo-aprobacion-retirado', 'motivo-aprobacion-retirado-fuerza-mayor') )) &gt; 0 then 'RETIRADO'
+WHEN (s.status_id = 2) or (select COUNT(*) from course_student cs (NOLOCK) WHERE SR.id = cs.student_record_id and cs.period_id = p.id and CS.approval_reason_id in (select id from VW_CATALOGO_REASON_COURSE (NOLOCK) WHERE Keyword in( 'motivo-aprobacion-reprobado-por-calificacion', 'motivo-aprobacion-reprobado-falta', 'motivo-aprobacion-reprobado-falta-calificacion') )) &gt;0 then 'INACTIVO'
+WHEN (select COUNT(*) from course_student cs (NOLOCK) where cs.student_record_id = SR.id) = 0 then 'DESISTIDO'
+end   as estado
+,S.stud_observation as 'observacion'
+from student_records SR (NOLOCK) 
+left join student_recods_period SRP (NOLOCK) ON SRP.student_record_id = SR.id
+left join periods P (NOLOCK) ON P.id = SRP.periodo_id 
+inner join students S (NOLOCK) ON S.id = SR.student_id 
+inner join users u (NOLOCK) ON u.id = s.user_id
+inner join persons pe (NOLOCK) ON u.person_id = pe.id
+inner join education_levels EL (NOLOCK) ON EL.id = SR.education_level_id
+where EL.offer_id=3 
+group by 
+S.id
+,pe.pers_full_name
+,P.per_name
+,P.per_current_year
+,sr.id
+,S.stud_observation
+,s.status_id
+,p.id
+)A
+where estado is not null and programa is not null
+order by estado, alumno_id</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\postgrado_retirados\ecotec.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[122.8.191.123.Ecotec.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[122.8.191.123.Ecotec.sa]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[alumno_id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[alumno_id]"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[alumno_id]"
+                      name="alumno_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[programa]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[programa]"
+                      length="255"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[programa]"
+                      name="programa"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[cohorte]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[cohorte]"
+                      length="255"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[cohorte]"
+                      name="cohorte"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_ini]"
+                      dataType="dbTimeStamp2"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_ini]"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_ini]"
+                      name="fecha_ini"
+                      scale="1"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[observacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[observacion]"
+                      length="255"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[observacion]"
+                      name="observacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[estado]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[estado]"
+                      length="20"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[estado]"
+                      name="estado"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[alumno_id]"
+                      dataType="i8"
+                      name="alumno_id" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[programa]"
+                      dataType="wstr"
+                      length="255"
+                      name="programa" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[cohorte]"
+                      dataType="wstr"
+                      length="255"
+                      name="cohorte" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_ini]"
+                      dataType="dbTimeStamp2"
+                      name="fecha_ini"
+                      scale="1" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[observacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="observacion" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[estado]"
+                      dataType="wstr"
+                      length="20"
+                      name="estado" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[alumno_id]"
+                      dataType="i8"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[alumno_id]"
+                      name="alumno_id" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[programa]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[programa]"
+                      name="programa" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[cohorte]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[cohorte]"
+                      name="cohorte" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_ini]"
+                      dataType="dbTimeStamp2"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_ini]"
+                      name="fecha_ini"
+                      scale="1" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[observacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[observacion]"
+                      name="observacion" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[estado]"
+                      dataType="wstr"
+                      length="20"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[estado]"
+                      name="estado" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\postgrado_retirados\report_ecotec"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="report_ecotec"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[rpt_postgrado_retirados]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\postgrado_retirados\report_ecotec.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[119.8.8.212.Report_Ecotec.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[119.8.8.212.Report_Ecotec.sa]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].Columns[alumno_id]"
+                      cachedDataType="i8"
+                      cachedName="alumno_id"
+                      externalMetadataColumnId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[alumno_id]"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[alumno_id]" />
+                    <inputColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].Columns[programa]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="programa"
+                      externalMetadataColumnId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[programa]"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[programa]" />
+                    <inputColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].Columns[cohorte]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="cohorte"
+                      externalMetadataColumnId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[cohorte]"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[cohorte]" />
+                    <inputColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].Columns[observacion]"
+                      cachedDataType="wstr"
+                      cachedLength="255"
+                      cachedName="observacion"
+                      externalMetadataColumnId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[observacion]"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[observacion]" />
+                    <inputColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].Columns[estado]"
+                      cachedDataType="wstr"
+                      cachedLength="20"
+                      cachedName="estado"
+                      externalMetadataColumnId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[estado]"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[estado]" />
+                    <inputColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].Columns[fecha_ini]"
+                      cachedDataType="dbTimeStamp2"
+                      cachedName="fecha_ini"
+                      cachedScale="1"
+                      externalMetadataColumnId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_inici]"
+                      lineageId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_ini]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[alumno_id]"
+                      dataType="i8"
+                      name="alumno_id" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[programa]"
+                      dataType="wstr"
+                      length="100"
+                      name="programa" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[cohorte]"
+                      dataType="wstr"
+                      length="100"
+                      name="cohorte" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_inici]"
+                      dataType="dbDate"
+                      name="fecha_inici" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[observacion]"
+                      dataType="wstr"
+                      length="250"
+                      name="observacion" />
+                    <externalMetadataColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[estado]"
+                      dataType="wstr"
+                      length="20"
+                      name="estado" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\postgrado_retirados\report_ecotec.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\postgrado_retirados\report_ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\postgrado_retirados\report_ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\postgrado_retirados\report_ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\postgrado_retirados.Paths[Salida de origen de OLE DB]"
+              endId="Package\postgrado_retirados\report_ecotec.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\postgrado_retirados\ecotec.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Reporte_Sneise"
+      DTS:CreationName="Microsoft.Pipeline"
+      DTS:Description="Tarea Flujo de datos"
+      DTS:DTSID="{e12673e9-097b-40bf-908f-8f5ba34ac242}"
+      DTS:ExecutableType="Microsoft.Pipeline"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Reporte_Sneise"
+      DTS:TaskContact="Performs high-performance data extraction, transformation and loading;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <pipeline
+          version="1">
+          <components>
+            <component
+              refId="Package\Reporte_Sneise\Ecotec"
+              componentClassID="Microsoft.OLEDBSource"
+              contactInfo="Origen de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;7"
+              description="Origen de OLE DB"
+              name="Ecotec"
+              usesDispositions="true"
+              version="7">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[rpt_graduados_posgrado_SNIESE]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor">--select top 0 * from rpt_graduados_posgrado_SNIESE
+
+select
+(select id from education_levels where id=(select principal_id from education_levels where id=SR.education_level_id)) as 'niveles_educativos_id_facultad'
+,(select id from education_levels where id=SR.education_level_id) as 'niveles_educativos_id_carrera'
+,(select top 1 s.id from students S  inner join users U on U.id=S.user_id inner join persons P on P.id=U.person_id where S.id=SR.student_id) as 'alumno_id'
+,(select V.DESCRIPTION FROM VW_CATALOGO_TYPE_IDENTIFICATION V where V.id=(select top 1 P.type_identification_id from students S  inner join users U on U.id=S.user_id inner join persons P on P.id=U.person_id where S.id=SR.student_id)) as 'tipo_identificacion'
+,(select top 1 P.pers_date_birth from students S  inner join users U on U.id=S.user_id inner join persons P on P.id=U.person_id where S.id=SR.student_id) as 'fecha_nacimiento'
+,(select V.DESCRIPTION FROM VW_CATALOGO_NATIONALITY V where V.id=(select top 1 P.nationality_id from students S  inner join users U on U.id=S.user_id inner join persons P on P.id=U.person_id where S.id=SR.student_id)) as 'pais_nacionalidad'
+,CAST('ECUADOR' as nvarchar(10))  as 'pais_residencia'
+,(select cat_name FROM catalogs where id=(select parent_id FROM catalogs where id=(select top 1 P.current_city_id from students S  inner join users U on U.id=S.user_id inner join persons P on P.id=U.person_id where S.id=SR.student_id))) as 'provincia_residencia'
+,(select V.DESCRIPTION FROM VW_CATALOGO_CITY V where V.id=(select top 1 P.current_city_id from students S  inner join users U on U.id=S.user_id inner join persons P on P.id=U.person_id where S.id=SR.student_id)) as 'canton_residencia'
+,(select pers_edu_certificate from person_educations PE where PE.id=SR.person_education_id ) as 'titulo'
+,(select pers_edu_graduation_date from person_educations PE where PE.id=SR.person_education_id ) as 'fecha_graduacion'
+from student_records SR
+where SR.person_education_id is not null</property>
+                <property
+                  dataType="System.String"
+                  description="Variable que contiene el comando SQL para ejecutar."
+                  name="SqlCommandVariable"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">2</property>
+                <property
+                  dataType="System.String"
+                  description="Asignaciones entre los parámetros del comando SQL y las variables."
+                  name="ParameterMapping"></property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Reporte_Sneise\Ecotec.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[122.8.191.123.Ecotec.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[122.8.191.123.Ecotec.sa]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <outputs>
+                <output
+                  refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB]"
+                  name="Salida de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[alumno_id]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[alumno_id]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[alumno_id]"
+                      name="alumno_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[tipo_identificacion]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[tipo_identificacion]"
+                      length="50"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[tipo_identificacion]"
+                      name="tipo_identificacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_nacimiento]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_nacimiento]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_nacimiento]"
+                      name="fecha_nacimiento"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[pais_nacionalidad]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[pais_nacionalidad]"
+                      length="50"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[pais_nacionalidad]"
+                      name="pais_nacionalidad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[pais_residencia]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[pais_residencia]"
+                      length="50"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[pais_residencia]"
+                      name="pais_residencia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[provincia_residencia]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[provincia_residencia]"
+                      length="50"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[provincia_residencia]"
+                      name="provincia_residencia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[canton_residencia]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[canton_residencia]"
+                      length="50"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[canton_residencia]"
+                      name="canton_residencia"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[titulo]"
+                      dataType="wstr"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[titulo]"
+                      length="250"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[titulo]"
+                      name="titulo"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_graduacion]"
+                      dataType="dbDate"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_graduacion]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_graduacion]"
+                      name="fecha_graduacion"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[niveles_educativos_id_facultad]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      name="niveles_educativos_id_facultad"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      dataType="i8"
+                      errorOrTruncationOperation="Conversión"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[niveles_educativos_id_carrera]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      name="niveles_educativos_id_carrera"
+                      truncationRowDisposition="FailComponent" />
+                  </outputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[alumno_id]"
+                      dataType="i8"
+                      name="alumno_id" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[tipo_identificacion]"
+                      dataType="wstr"
+                      length="255"
+                      name="tipo_identificacion" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_nacimiento]"
+                      dataType="dbDate"
+                      name="fecha_nacimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[pais_nacionalidad]"
+                      dataType="wstr"
+                      length="255"
+                      name="pais_nacionalidad" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[pais_residencia]"
+                      dataType="wstr"
+                      length="10"
+                      name="pais_residencia" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[provincia_residencia]"
+                      dataType="wstr"
+                      length="255"
+                      name="provincia_residencia" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[canton_residencia]"
+                      dataType="wstr"
+                      length="255"
+                      name="canton_residencia" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[titulo]"
+                      dataType="wstr"
+                      length="255"
+                      name="titulo" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[fecha_graduacion]"
+                      dataType="dbDate"
+                      name="fecha_graduacion" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[niveles_educativos_id_facultad]"
+                      dataType="i8"
+                      name="niveles_educativos_id_facultad" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].ExternalColumns[niveles_educativos_id_carrera]"
+                      dataType="i8"
+                      name="niveles_educativos_id_carrera" />
+                  </externalMetadataColumns>
+                </output>
+                <output
+                  refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB]"
+                  isErrorOut="true"
+                  name="Salida de error de origen de OLE DB">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      dataType="i8"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      name="niveles_educativos_id_facultad" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      dataType="i8"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      name="niveles_educativos_id_carrera" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[alumno_id]"
+                      dataType="i8"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[alumno_id]"
+                      name="alumno_id" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[tipo_identificacion]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[tipo_identificacion]"
+                      name="tipo_identificacion" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_nacimiento]"
+                      dataType="dbDate"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_nacimiento]"
+                      name="fecha_nacimiento" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[pais_nacionalidad]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[pais_nacionalidad]"
+                      name="pais_nacionalidad" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[pais_residencia]"
+                      dataType="wstr"
+                      length="10"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[pais_residencia]"
+                      name="pais_residencia" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[provincia_residencia]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[provincia_residencia]"
+                      name="provincia_residencia" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[canton_residencia]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[canton_residencia]"
+                      name="canton_residencia" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[titulo]"
+                      dataType="wstr"
+                      length="255"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[titulo]"
+                      name="titulo" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_graduacion]"
+                      dataType="dbDate"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[fecha_graduacion]"
+                      name="fecha_graduacion" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de error de origen de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\Reporte_Sneise\rpt_Ecotec"
+              componentClassID="Microsoft.OLEDBDestination"
+              contactInfo="Destino de OLE DB;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; Todos los derechos reservados; http://www.microsoft.com/sql/support;4"
+              description="Destino de OLE DB"
+              name="rpt_Ecotec"
+              usesDispositions="true"
+              version="4">
+              <properties>
+                <property
+                  dataType="System.Int32"
+                  description="Número de segundos antes de que se agote el tiempo de espera de un comando. Un valor de 0 indica un tiempo de espera infinito."
+                  name="CommandTimeout">0</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowset">[dbo].[rpt_graduados_posgrado_SNIESE]</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica la variable que contiene el nombre del objeto de base de datos usado para abrir un conjunto de filas."
+                  name="OpenRowsetVariable"></property>
+                <property
+                  dataType="System.String"
+                  description="Comando SQL para ejecutar."
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor"></property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica la página de códigos de columna para utilizar cuando la información de página de códigos no está disponible en el origen de datos."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Fuerza el uso del valor de la propiedad DefaultCodePage al describir datos de caracteres."
+                  name="AlwaysUseDefaultCodePage">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica el modo utilizado para obtener acceso a la base de datos."
+                  name="AccessMode"
+                  typeConverter="AccessMode">3</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si los valores proporcionados para columnas de identidad se van a copiar al destino. Si es False, los valores de las columnas de identidad se generan automáticamente en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepIdentity">false</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Indica si las columnas que contienen NULL tendrán NULL insertado en el destino. Si es False, las columnas que contienen NULL tendrán sus valores predeterminados insertados en el destino. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadKeepNulls">false</property>
+                <property
+                  dataType="System.String"
+                  description="Especifica opciones para usar con la carga rápida. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadOptions">TABLOCK,CHECK_CONSTRAINTS</property>
+                <property
+                  dataType="System.Int32"
+                  description="Especifica cuándo se emiten confirmaciones durante la inserción de datos. El valor 0 especifica que se emitirá una confirmación al final de la inserción de datos. Solo se aplica si está activada la carga rápida."
+                  name="FastLoadMaxInsertCommitSize">2147483647</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\Reporte_Sneise\rpt_Ecotec.Connections[OleDbConnection]"
+                  connectionManagerID="Package.ConnectionManagers[119.8.8.212.Report_Ecotec.sa]"
+                  connectionManagerRefId="Package.ConnectionManagers[119.8.8.212.Report_Ecotec.sa]"
+                  description="La conexión de tiempo de ejecución OLE DB usada para obtener acceso a la base de datos."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB]"
+                  errorOrTruncationOperation="Insertar"
+                  errorRowDisposition="FailComponent"
+                  hasSideEffects="true"
+                  name="Entrada de destino de OLE DB">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[alumno_id]"
+                      cachedDataType="i8"
+                      cachedName="alumno_id"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[alumno_id]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[alumno_id]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[niveles_educativos_id_facultad]"
+                      cachedDataType="i8"
+                      cachedName="niveles_educativos_id_facultad"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[niveles_educativos_id_facultad]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_facultad]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[niveles_educativos_id_carrera]"
+                      cachedDataType="i8"
+                      cachedName="niveles_educativos_id_carrera"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[niveles_educativos_id_carrera]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[niveles_educativos_id_carrera]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[tipo_identificacion]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="tipo_identificacion"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[tipo_identificacion]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[tipo_identificacion]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[fecha_nacimiento]"
+                      cachedDataType="dbDate"
+                      cachedName="fecha_nacimiento"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_nacimiento]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_nacimiento]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[pais_nacionalidad]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="pais_nacionalidad"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[pais_nacionalidad]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[pais_nacionalidad]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[pais_residencia]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="pais_residencia"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[pais_residencia]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[pais_residencia]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[provincia_residencia]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="provincia_residencia"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[provincia_residencia]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[provincia_residencia]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[canton_residencia]"
+                      cachedDataType="wstr"
+                      cachedLength="50"
+                      cachedName="canton_residencia"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[canton_residencia]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[canton_residencia]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[titulo]"
+                      cachedDataType="wstr"
+                      cachedLength="250"
+                      cachedName="titulo"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[titulo]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[titulo]" />
+                    <inputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].Columns[fecha_graduacion]"
+                      cachedDataType="dbDate"
+                      cachedName="fecha_graduacion"
+                      externalMetadataColumnId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_graduacion]"
+                      lineageId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB].Columns[fecha_graduacion]" />
+                  </inputColumns>
+                  <externalMetadataColumns
+                    isUsed="True">
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[id]"
+                      dataType="i8"
+                      name="id" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[niveles_educativos_id_facultad]"
+                      dataType="i8"
+                      name="niveles_educativos_id_facultad" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[niveles_educativos_id_carrera]"
+                      dataType="i8"
+                      name="niveles_educativos_id_carrera" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[alumno_id]"
+                      dataType="i8"
+                      name="alumno_id" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[tipo_identificacion]"
+                      dataType="wstr"
+                      length="50"
+                      name="tipo_identificacion" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_nacimiento]"
+                      dataType="dbDate"
+                      name="fecha_nacimiento" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[pais_nacionalidad]"
+                      dataType="wstr"
+                      length="50"
+                      name="pais_nacionalidad" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[pais_residencia]"
+                      dataType="wstr"
+                      length="50"
+                      name="pais_residencia" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[provincia_residencia]"
+                      dataType="wstr"
+                      length="50"
+                      name="provincia_residencia" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[canton_residencia]"
+                      dataType="wstr"
+                      length="50"
+                      name="canton_residencia" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[titulo]"
+                      dataType="wstr"
+                      length="250"
+                      name="titulo" />
+                    <externalMetadataColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB].ExternalColumns[fecha_graduacion]"
+                      dataType="dbDate"
+                      name="fecha_graduacion" />
+                  </externalMetadataColumns>
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\Reporte_Sneise\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Salida de error de destino de OLE DB"
+                  synchronousInputId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\Reporte_Sneise\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\Reporte_Sneise\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\Reporte_Sneise\rpt_Ecotec.Outputs[Salida de error de destino de OLE DB].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+          </components>
+          <paths>
+            <path
+              refId="Package\Reporte_Sneise.Paths[Salida de origen de OLE DB]"
+              endId="Package\Reporte_Sneise\rpt_Ecotec.Inputs[Entrada de destino de OLE DB]"
+              name="Salida de origen de OLE DB"
+              startId="Package\Reporte_Sneise\Ecotec.Outputs[Salida de origen de OLE DB]" />
+          </paths>
+        </pipeline>
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\rpt_cartera_vencida_postgrado"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="rpt_cartera_vencida_postgrado"
+      DTS:DTSID="{9DFEB251-42C1-4685-A2FD-BC1EA7B98D51}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="rpt_cartera_vencida_postgrado"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2728B941-C98A-4E7C-8C57-9C244C81C76D}"
+          SQLTask:SqlStatementSource="truncate table rpt_cartera_vencida_postgrado" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\rpt_graduados_posgrado_SNIESE"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="rpt_graduados_posgrado_SNIESE"
+      DTS:DTSID="{DE82DEA1-8046-4D65-A6FC-2BE2D53BC677}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="rpt_graduados_posgrado_SNIESE"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2728B941-C98A-4E7C-8C57-9C244C81C76D}"
+          SQLTask:SqlStatementSource="truncate table dbo.rpt_graduados_posgrado_SNIESE" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\rpt_postgrado_retirados"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Tarea Ejecutar SQL"
+      DTS:DTSID="{3319E27E-0D6A-4976-BD74-5BDDAEDDC717}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="rpt_postgrado_retirados"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2022; © 2022 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{2728B941-C98A-4E7C-8C57-9C244C81C76D}"
+          SQLTask:SqlStatementSource="truncate table dbo.rpt_postgrado_retirados" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{CAE11812-EF35-4F8D-8DCE-739F6059C022}"
+      DTS:From="Package\rpt_cartera_vencida_postgrado"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\cartera_vencida_posgrado" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
+      DTS:CreationName=""
+      DTS:DTSID="{DCE148CA-1FED-4A6E-8DD1-E3D46B763857}"
+      DTS:From="Package\rpt_graduados_posgrado_SNIESE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 1"
+      DTS:To="Package\Reporte_Sneise" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 2]"
+      DTS:CreationName=""
+      DTS:DTSID="{1E63572F-4579-4A86-A8D4-D08707F52863}"
+      DTS:From="Package\rpt_graduados_posgrado_SNIESE"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 2"
+      DTS:To="Package\rpt_cartera_vencida_postgrado" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 3]"
+      DTS:CreationName=""
+      DTS:DTSID="{B17DB7E6-4A48-4D5D-BF1E-2A37B90F50DD}"
+      DTS:From="Package\rpt_cartera_vencida_postgrado"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 3"
+      DTS:To="Package\rpt_postgrado_retirados" />
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint 4]"
+      DTS:CreationName=""
+      DTS:DTSID="{3970C4CC-B99E-43F7-9816-68030D132E6C}"
+      DTS:From="Package\rpt_postgrado_retirados"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint 4"
+      DTS:To="Package\postgrado_retirados" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="16" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="152,42"
+          Id="Package\Reporte_Sneise"
+          TopLeft="439,198" />
+        <NodeLayout
+          Size="237,42"
+          Id="Package\rpt_graduados_posgrado_SNIESE"
+          TopLeft="114,208" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 1]"
+          TopLeft="351,229">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="88,-10"
+              Start="0,0"
+              End="80.5,-10">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="40,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="40,0"
+                    Point2="44,0"
+                    Point3="44,-4" />
+                  <mssgle:LineSegment
+                    End="44,-6" />
+                  <mssgle:CubicBezierSegment
+                    Point1="44,-6"
+                    Point2="44,-10"
+                    Point3="48,-10" />
+                  <mssgle:LineSegment
+                    End="80.5,-10" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="226,42"
+          Id="Package\rpt_cartera_vencida_postgrado"
+          TopLeft="128,285" />
+        <NodeLayout
+          Size="203,42"
+          Id="Package\cartera_vencida_posgrado"
+          TopLeft="474,288" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="354,307.5">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="120,0"
+              Start="0,0"
+              End="112.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="112.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 2]"
+          TopLeft="232.5,250">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8.5,35"
+              Start="0,0"
+              End="8.5,27.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,13.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,13.5"
+                    Point2="0,17.5"
+                    Point3="4,17.5" />
+                  <mssgle:LineSegment
+                    End="4.5,17.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4.5,17.5"
+                    Point2="8.5,17.5"
+                    Point3="8.5,21.5" />
+                  <mssgle:LineSegment
+                    End="8.5,27.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="192,42"
+          Id="Package\rpt_postgrado_retirados"
+          TopLeft="153,371" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 3]"
+          TopLeft="241,327">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="8,44"
+              Start="0,0"
+              End="8,36.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,18"
+                    Point2="0,22"
+                    Point3="4,22" />
+                  <mssgle:LineSegment
+                    End="4,22" />
+                  <mssgle:CubicBezierSegment
+                    Point1="4,22"
+                    Point2="8,22"
+                    Point3="8,26" />
+                  <mssgle:LineSegment
+                    End="8,36.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="173,42"
+          Id="Package\postgrado_retirados"
+          TopLeft="468,365" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint 4]"
+          TopLeft="345,389">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="123,0"
+              Start="0,0"
+              End="115.5,0">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="115.5,0" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+  <TaskHost
+    design-time-name="Package\Reporte_Sneise">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="110,42"
+          Id="Package\Reporte_Sneise\Ecotec"
+          TopLeft="345,55" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\Reporte_Sneise\rpt_Ecotec"
+          TopLeft="338,167" />
+        <EdgeLayout
+          Id="Package\Reporte_Sneise.Paths[Salida de origen de OLE DB]"
+          TopLeft="401.25,97">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\Reporte_Sneise\Ecotec">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\Reporte_Sneise\rpt_Ecotec">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\cartera_vencida_posgrado">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="110,42"
+          Id="Package\cartera_vencida_posgrado\Ecotec"
+          TopLeft="345,55" />
+        <NodeLayout
+          Size="129,42"
+          Id="Package\cartera_vencida_posgrado\rpt_Ecotec"
+          TopLeft="338,167" />
+        <EdgeLayout
+          Id="Package\cartera_vencida_posgrado.Paths[Salida de origen de OLE DB]"
+          TopLeft="401.25,97">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,70"
+              Start="0,0"
+              End="0,62.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,62.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\cartera_vencida_posgrado\Ecotec">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\cartera_vencida_posgrado\rpt_Ecotec">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <TaskHost
+    design-time-name="Package\postgrado_retirados">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="109,42"
+          Id="Package\postgrado_retirados\ecotec"
+          TopLeft="220,43" />
+        <NodeLayout
+          Size="144,42"
+          Id="Package\postgrado_retirados\report_ecotec"
+          TopLeft="218,192" />
+        <EdgeLayout
+          Id="Package\postgrado_retirados.Paths[Salida de origen de OLE DB]"
+          TopLeft="274.5,85">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="15.5,107"
+              Start="0,0"
+              End="15.5,99.5">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,49.5"
+                    Point2="0,53.5"
+                    Point3="4,53.5" />
+                  <mssgle:LineSegment
+                    End="11.5,53.5" />
+                  <mssgle:CubicBezierSegment
+                    Point1="11.5,53.5"
+                    Point2="15.5,53.5"
+                    Point3="15.5,57.5" />
+                  <mssgle:LineSegment
+                    End="15.5,99.5" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </TaskHost>
+  <PipelineComponentMetadata
+    design-time-name="Package\postgrado_retirados\ecotec">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\postgrado_retirados\report_ecotec">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>
